@@ -26,7 +26,7 @@ Each inference call returns a tensor of shape `[1, 5, 8190]`. Transpose to `[819
 - `w, h` - bounding box dimensions in model input coordinates
 - `confidence` - detection confidence score between 0 and 1
 
-Scale box coordinates back to original image size and apply NMS manually. A confidence threshold of `0.40` and IoU threshold of `0.45` are reasonable starting points.
+Scale box coordinates back to original image size and apply NMS manually. A confidence threshold of `0.40` and IoU threshold of `0.45` are our starting points.
 -----
 ## Training
 Covers pill images across varied lighting, backgrounds, and orientations with bounding box annotations in YOLO format.
@@ -64,7 +64,7 @@ NMS is left off so the C++ backend can apply it directly via `cv::dnn::NMSBoxes`
 ## Test Results
 Tested on pill images across capsules, tablets, and coated pills.
 
-(video link will be placed here).
+[(videos here).](https://sites.google.com/pcti.mobi/astromed/post-cdr?authuser=0)
 -----
 ## C++ Integration for live individual pill recognition
 The model loads via `cv::dnn::readNet` and runs as a module inside the backend. Each frame is passed into `PillDetector::run()` which handles the full pipeline: blob creation, forward pass, output parsing, NMS, and per-detection ORB feature matching against a directory of registered reference images.
