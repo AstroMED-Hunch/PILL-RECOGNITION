@@ -102,8 +102,13 @@ pill_images_dir       path to reference image directory
 -----
 ## Files
 ```
+model & testing:
 astromed.onnx  # ONNX model
 test.py        # basic python test script
+
+integration:
+PillDetector.hpp
+PillDetector.cpp
 ```
 -----
 ## Dependencies
