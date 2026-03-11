@@ -3,7 +3,7 @@ disclaimer: This is a presentable repo - the pill recognition is NOT separate fr
 -----
 # Pill Detection Model ( .ONNX )
 Trained on the [NIH](https://pmc.ncbi.nlm.nih.gov/articles/PMC5973812/) dataset using YOLO11s. Exported to ONNX for integration into C++ backend via OpenCV dnn.
------
+
 ## Model Overview
 |Property       |Value                                   |
 |---------------|----------------------------------------|
