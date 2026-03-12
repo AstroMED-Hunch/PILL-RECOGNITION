@@ -1,5 +1,5 @@
 # PILL-RECOGNITION-SOLUTION
-disclaimer: This is a presentable repo - the pill recognition is NOT separate from our backend - [check out the backend repo for the full codebase](https://github.com/AstroMED-Hunch/Backend) - although we do still include the model & basic test code in this repo)
+disclaimer: This is a presentable repo of our pill model, its training, and its astromed integration - the pill recognition is NOT separate from our c++ backend - [check out the backend repo for the full codebase](https://github.com/AstroMED-Hunch/Backend) 
 -----
 # Pill Detection Model ( .ONNX )
 Trained on the [NIH](https://pmc.ncbi.nlm.nih.gov/articles/PMC5973812/) dataset using YOLO11s. Exported to ONNX for integration into C++ backend via OpenCV dnn.
