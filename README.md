@@ -1,5 +1,5 @@
 # PILL-RECOGNITION-SOLUTION
-disclaimer: This is a presentable repo of our pill model, its training, and its astromed integration - the pill recognition is NOT separate from our c++ backend - [check out the backend repo for the full codebase](https://github.com/AstroMED-Hunch/Backend) 
+disclaimer: This is a presentable repo of our pill model, its training, and its AIMS integration - the pill recognition is NOT separate from our c++ backend - [check out the backend repo for the full codebase](https://github.com/AIMS-Inventory/Backend)  
 -----
 # Pill Detection Model ( .ONNX )
 Trained on the [NIH](https://pmc.ncbi.nlm.nih.gov/articles/PMC5973812/) dataset using YOLO11s. Exported to ONNX for integration into C++ backend via OpenCV dnn.
@@ -34,7 +34,7 @@ Covers pill images across varied lighting, backgrounds, and orientations with bo
 
 **Training config:**
 ```yaml
-model:    astromed.yaml   # YOLO11s with Leaky ReLU activations
+model:    AIMS.yaml   # YOLO11s with Leaky ReLU activations
 epochs:   120
 patience: 100
 imgsz:    [480, 832]
@@ -49,7 +49,7 @@ hsv_v:    0.4
 **Export:**
 ```python
 from ultralytics import YOLO
-model = YOLO("astromed.pt")
+model = YOLO("AIMS.pt")
 model.export(
     format="onnx",
     imgsz=[480, 832],
@@ -96,14 +96,14 @@ extern/pills/paracetamol.jpg
 
 **Config keys** (set in layout config):
 ```
-pill_detector_model   path to astromed.onnx
+pill_detector_model   path to AIMS.onnx
 pill_images_dir       path to reference image directory
 ```
 -----
 ## Files
 ```
 model & testing:
-astromed.onnx  # ONNX model
+AIMS.onnx  # ONNX model
 test.py        # basic python test script
 
 integration:
