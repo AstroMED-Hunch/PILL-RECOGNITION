@@ -1,4 +1,4 @@
-# PILL-RECOGNITION-SOLUTION
+# AIMS : PILL-SOLUTION
 disclaimer: This is a presentable repo of our pill model, its training, and its AIMS integration - the pill recognition is NOT separate from our c++ backend - [check out the backend repo for the full codebase](https://github.com/AIMS-Inventory/Backend)  
 -----
 # Pill Detection Model ( .ONNX )
